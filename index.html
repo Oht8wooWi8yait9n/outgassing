@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NASA GSFC Spacecraft Materials Outgassing Database (ASTM E595)</title>
+  <link rel="canonical" href="https://oht8woowi8yait9n.github.io/outgassing/index.html">
+  
+<style>
+  :root {
+    --bg: #0b1120;
+    --card: #1e293b;
+    --border: #334155;
+    --text: #f8fafc;
+    --muted: #94a3b8;
+    --accent: #38bdf8;
+    --pass-bg: #064e3b;
+    --pass-text: #6ee7b7;
+    --warn-bg: #78350f;
+    --warn-text: #fcd34d;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    margin: 0;
+    padding: 32px;
+  }
+  .container { max-width: 1240px; margin: 0 auto; }
+  header {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 24px;
+  }
+  h1 { margin: 0 0 8px 0; color: var(--accent); font-size: 26px; }
+  h2 { color: var(--accent); font-size: 20px; border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-top: 28px; }
+  h3 { color: #bae6fd; font-size: 17px; margin: 16px 0 8px 0; }
+  p, li { color: #e2e8f0; }
+  .meta { color: var(--muted); font-size: 13px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .badge-pass { background: var(--pass-bg); color: var(--pass-text); }
+  .badge-warn { background: var(--warn-bg); color: var(--warn-text); }
+  .badge-info { background: #1e3a8a; color: #93c5fd; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #0f172a; color: var(--accent); font-weight: 600; }
+  tr:nth-child(even) { background: rgba(15, 23, 42, 0.45); }
+  code { background: #0f172a; padding: 2px 6px; border-radius: 4px; color: #bae6fd; font-family: monospace; }
+  .nav-bar { margin-bottom: 16px; font-size: 14px; }
+  .nav-bar a { margin-right: 18px; font-weight: 500; }
+</style>
+
+</head>
+<body>
+  <div class="container">
+    <div class="nav-bar">
+      <a href="index.html">Outgassing Database Home</a>
+      <a href="user-guide.html">ASTM E595 User Guide</a>
+      <a href="manufacturers.html">Manufacturer Codes (963)</a>
+      <a href="OutgassingData-CSV.csv">Download Raw CSV</a>
+    </div>
+    
+    <header>
+      <h1>NASA GSFC Spacecraft Materials Outgassing Database (ASTM E595)</h1>
+      <div class="meta">
+        Official Mirror of <a href="https://outgassing.nasa.gov/">https://outgassing.nasa.gov/</a> &amp;
+        <a href="https://etd.gsfc.nasa.gov/capabilities/outgassing-database/">etd.gsfc.nasa.gov/capabilities/outgassing-database/</a> |
+        Goddard Space Flight Center (GSFC) Materials Engineering Branch
+      </div>
+    </header>
+
+    <div class="card">
+      <h2>Database Overview &amp; Spaceflight Screening Criteria</h2>
+      <p>
+        This compilation of outgassing data of materials intended for spacecraft use supersedes <strong>NASA Reference Publication 1124, Revision 3</strong>.
+        All materials are tested at NASA Goddard Space Flight Center (GSFC) per <strong>ASTM E595-77/84/90</strong>
+        (<em>Total Mass Loss (TML) and Collected Volatile Condensable Materials (CVCM) from Outgassing in a Vacuum Environment</em>: 24 hours at 125 °C at &lt;5×10<sup>-5</sup> torr, with volatile condensables collected at 25 °C).
+      </p>
+      <ul>
+        <li><strong>Total ASTM E595 Material Test Records:</strong> <strong>13,582</strong> (`GSFC` / `GSC` Data References, 1967–present)</li>
+        <li><strong>Spaceflight Low-Outgassing Qualified Materials (TML ≤ 1.0% &amp; CVCM ≤ 0.10%):</strong> <strong>6,293</strong> (46.3%)</li>
+        <li><strong>Aerospace Manufacturers Indexed:</strong> <a href="manufacturers.html"><strong>1,552 Manufacturer 3-Letter Codes</strong></a> (resolved from NASA RP-1124 Appendix A)</li>
+        <li><strong>Documentation &amp; Raw Exports:</strong> <a href="user-guide.html"><strong>Official Outgassing User Guide</strong></a> | <a href="OutgassingData-CSV.csv"><strong>Raw CSV Dataset (1.37 MB)</strong></a> | <a href="outgassing_records.jsonl"><strong>Structured JSONL Dataset</strong></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Browse Outgassing Records by Spacecraft Application Category (13,582 Records across 146 Catalog Pages)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Application Category</th>
+            <th>Total Tests</th>
+            <th>Low-Outgassing Qualified (≤1.0% TML, ≤0.10% CVCM)</th>
+            <th>Catalog Pages</th>
+          </tr>
+        </thead>
+        <tbody><tr><td><a href='catalog/adhesives-cements-p01.html'><strong>Adhesives, Conductive Adhesives &amp; Cements</strong></a></td><td>2,859</td><td>1,198 (41.9%)</td><td>29 pages</td></tr><tr><td><a href='catalog/coatings-paints-primers-p01.html'><strong>Coatings, Conformal Coatings, Paints &amp; Primers</strong></a></td><td>1,630</td><td>470 (28.8%)</td><td>17 pages</td></tr><tr><td><a href='catalog/thermal-electrical-insulation-p01.html'><strong>Thermal &amp; Electrical Insulation, Blankets &amp; Shields</strong></a></td><td>802</td><td>457 (57.0%)</td><td>9 pages</td></tr><tr><td><a href='catalog/potting-encapsulants-p01.html'><strong>Potting Compounds &amp; Encapsulants</strong></a></td><td>993</td><td>553 (55.7%)</td><td>10 pages</td></tr><tr><td><a href='catalog/tapes-pressure-sensitive-p01.html'><strong>Tapes &amp; Pressure-Sensitive Films</strong></a></td><td>761</td><td>292 (38.4%)</td><td>8 pages</td></tr><tr><td><a href='catalog/molding-compounds-resins-p01.html'><strong>Molding Compounds, Resins, Epoxies &amp; Silicones</strong></a></td><td>810</td><td>529 (65.3%)</td><td>9 pages</td></tr><tr><td><a href='catalog/laminates-circuit-boards-p01.html'><strong>Laminates, Circuit Boards &amp; Solder Masks</strong></a></td><td>654</td><td>485 (74.2%)</td><td>7 pages</td></tr><tr><td><a href='catalog/sealants-gaskets-orings-p01.html'><strong>Sealants, Gaskets, O-Rings &amp; Valves</strong></a></td><td>579</td><td>250 (43.2%)</td><td>6 pages</td></tr><tr><td><a href='catalog/wire-cable-tubing-sleeving-p01.html'><strong>Wire, Cable, Shrink Tubing &amp; Sleeving</strong></a></td><td>800</td><td>493 (61.6%)</td><td>8 pages</td></tr><tr><td><a href='catalog/films-sheets-antistatic-p01.html'><strong>Films, Sheets, Foils &amp; Anti-Static Materials</strong></a></td><td>473</td><td>229 (48.4%)</td><td>5 pages</td></tr><tr><td><a href='catalog/foams-honeycombs-cellular-p01.html'><strong>Foams, Honeycombs &amp; Cellular Materials</strong></a></td><td>435</td><td>113 (26.0%)</td><td>5 pages</td></tr><tr><td><a href='catalog/inks-labels-marking-p01.html'><strong>Inks, Labels, Decals &amp; Marking Materials</strong></a></td><td>410</td><td>112 (27.3%)</td><td>5 pages</td></tr><tr><td><a href='catalog/lubricants-greases-oils-p01.html'><strong>Lubricants, Greases, Oils &amp; Fluids</strong></a></td><td>340</td><td>130 (38.2%)</td><td>4 pages</td></tr><tr><td><a href='catalog/dampers-mounts-isolators-p01.html'><strong>Dampers, Mounts, Pads &amp; Vibration Isolators</strong></a></td><td>258</td><td>100 (38.8%)</td><td>3 pages</td></tr><tr><td><a href='catalog/electronic-components-connectors-p01.html'><strong>Electronic Components, Connectors, Sensors &amp; Heaters</strong></a></td><td>224</td><td>158 (70.5%)</td><td>3 pages</td></tr><tr><td><a href='catalog/structural-composites-fasteners-p01.html'><strong>Structural Hardware, Composites &amp; Fasteners</strong></a></td><td>196</td><td>92 (46.9%)</td><td>2 pages</td></tr><tr><td><a href='catalog/fabrics-fibers-textiles-p01.html'><strong>Fabrics, Fibers, Lacing Cord, Velcro &amp; Textiles</strong></a></td><td>356</td><td>143 (40.2%)</td><td>4 pages</td></tr><tr><td><a href='catalog/optical-windows-glasses-p01.html'><strong>Optical Materials, Lenses, Mirrors &amp; Windows</strong></a></td><td>35</td><td>19 (54.3%)</td><td>1 pages</td></tr><tr><td><a href='catalog/other-specialty-materials-p01.html'><strong>Other Specialty Spacecraft Materials</strong></a></td><td>926</td><td>446 (48.2%)</td><td>10 pages</td></tr><tr><td><a href='catalog/unspecified-general-p01.html'><strong>General / Unspecified Application Materials</strong></a></td><td>41</td><td>24 (58.5%)</td><td>1 pages</td></tr></tbody>
+      </table>
+    </div>
+    
+  </div>
+</body>
+</html>

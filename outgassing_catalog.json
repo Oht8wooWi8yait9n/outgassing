@@ -1,0 +1,169 @@
+{
+  "generated_at": "2026-10-16T17:48:13.536475+00:00",
+  "total_records": 13582,
+  "passed_records": 6293,
+  "total_manufacturers": 1552,
+  "total_sitemap_urls": 149,
+  "categories": [
+    {
+      "slug": "adhesives-cements",
+      "title": "Adhesives, Conductive Adhesives & Cements",
+      "total_records": 2859,
+      "passed_records": 1198,
+      "num_pages": 29,
+      "first_page": "catalog/adhesives-cements-p01.html"
+    },
+    {
+      "slug": "coatings-paints-primers",
+      "title": "Coatings, Conformal Coatings, Paints & Primers",
+      "total_records": 1630,
+      "passed_records": 470,
+      "num_pages": 17,
+      "first_page": "catalog/coatings-paints-primers-p01.html"
+    },
+    {
+      "slug": "thermal-electrical-insulation",
+      "title": "Thermal & Electrical Insulation, Blankets & Shields",
+      "total_records": 802,
+      "passed_records": 457,
+      "num_pages": 9,
+      "first_page": "catalog/thermal-electrical-insulation-p01.html"
+    },
+    {
+      "slug": "potting-encapsulants",
+      "title": "Potting Compounds & Encapsulants",
+      "total_records": 993,
+      "passed_records": 553,
+      "num_pages": 10,
+      "first_page": "catalog/potting-encapsulants-p01.html"
+    },
+    {
+      "slug": "tapes-pressure-sensitive",
+      "title": "Tapes & Pressure-Sensitive Films",
+      "total_records": 761,
+      "passed_records": 292,
+      "num_pages": 8,
+      "first_page": "catalog/tapes-pressure-sensitive-p01.html"
+    },
+    {
+      "slug": "molding-compounds-resins",
+      "title": "Molding Compounds, Resins, Epoxies & Silicones",
+      "total_records": 810,
+      "passed_records": 529,
+      "num_pages": 9,
+      "first_page": "catalog/molding-compounds-resins-p01.html"
+    },
+    {
+      "slug": "laminates-circuit-boards",
+      "title": "Laminates, Circuit Boards & Solder Masks",
+      "total_records": 654,
+      "passed_records": 485,
+      "num_pages": 7,
+      "first_page": "catalog/laminates-circuit-boards-p01.html"
+    },
+    {
+      "slug": "sealants-gaskets-orings",
+      "title": "Sealants, Gaskets, O-Rings & Valves",
+      "total_records": 579,
+      "passed_records": 250,
+      "num_pages": 6,
+      "first_page": "catalog/sealants-gaskets-orings-p01.html"
+    },
+    {
+      "slug": "wire-cable-tubing-sleeving",
+      "title": "Wire, Cable, Shrink Tubing & Sleeving",
+      "total_records": 800,
+      "passed_records": 493,
+      "num_pages": 8,
+      "first_page": "catalog/wire-cable-tubing-sleeving-p01.html"
+    },
+    {
+      "slug": "films-sheets-antistatic",
+      "title": "Films, Sheets, Foils & Anti-Static Materials",
+      "total_records": 473,
+      "passed_records": 229,
+      "num_pages": 5,
+      "first_page": "catalog/films-sheets-antistatic-p01.html"
+    },
+    {
+      "slug": "foams-honeycombs-cellular",
+      "title": "Foams, Honeycombs & Cellular Materials",
+      "total_records": 435,
+      "passed_records": 113,
+      "num_pages": 5,
+      "first_page": "catalog/foams-honeycombs-cellular-p01.html"
+    },
+    {
+      "slug": "inks-labels-marking",
+      "title": "Inks, Labels, Decals & Marking Materials",
+      "total_records": 410,
+      "passed_records": 112,
+      "num_pages": 5,
+      "first_page": "catalog/inks-labels-marking-p01.html"
+    },
+    {
+      "slug": "lubricants-greases-oils",
+      "title": "Lubricants, Greases, Oils & Fluids",
+      "total_records": 340,
+      "passed_records": 130,
+      "num_pages": 4,
+      "first_page": "catalog/lubricants-greases-oils-p01.html"
+    },
+    {
+      "slug": "dampers-mounts-isolators",
+      "title": "Dampers, Mounts, Pads & Vibration Isolators",
+      "total_records": 258,
+      "passed_records": 100,
+      "num_pages": 3,
+      "first_page": "catalog/dampers-mounts-isolators-p01.html"
+    },
+    {
+      "slug": "electronic-components-connectors",
+      "title": "Electronic Components, Connectors, Sensors & Heaters",
+      "total_records": 224,
+      "passed_records": 158,
+      "num_pages": 3,
+      "first_page": "catalog/electronic-components-connectors-p01.html"
+    },
+    {
+      "slug": "structural-composites-fasteners",
+      "title": "Structural Hardware, Composites & Fasteners",
+      "total_records": 196,
+      "passed_records": 92,
+      "num_pages": 2,
+      "first_page": "catalog/structural-composites-fasteners-p01.html"
+    },
+    {
+      "slug": "fabrics-fibers-textiles",
+      "title": "Fabrics, Fibers, Lacing Cord, Velcro & Textiles",
+      "total_records": 356,
+      "passed_records": 143,
+      "num_pages": 4,
+      "first_page": "catalog/fabrics-fibers-textiles-p01.html"
+    },
+    {
+      "slug": "optical-windows-glasses",
+      "title": "Optical Materials, Lenses, Mirrors & Windows",
+      "total_records": 35,
+      "passed_records": 19,
+      "num_pages": 1,
+      "first_page": "catalog/optical-windows-glasses-p01.html"
+    },
+    {
+      "slug": "other-specialty-materials",
+      "title": "Other Specialty Spacecraft Materials",
+      "total_records": 926,
+      "passed_records": 446,
+      "num_pages": 10,
+      "first_page": "catalog/other-specialty-materials-p01.html"
+    },
+    {
+      "slug": "unspecified-general",
+      "title": "General / Unspecified Application Materials",
+      "total_records": 41,
+      "passed_records": 24,
+      "num_pages": 1,
+      "first_page": "catalog/unspecified-general-p01.html"
+    }
+  ]
+}

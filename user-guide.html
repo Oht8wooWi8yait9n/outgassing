@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NASA Outgassing Database User Guide (ASTM E595)</title>
+  <link rel="canonical" href="https://etd.gsfc.nasa.gov/capabilities/outgassing-database/user-guide/">
+  
+<style>
+  :root {
+    --bg: #0b1120;
+    --card: #1e293b;
+    --border: #334155;
+    --text: #f8fafc;
+    --muted: #94a3b8;
+    --accent: #38bdf8;
+    --pass-bg: #064e3b;
+    --pass-text: #6ee7b7;
+    --warn-bg: #78350f;
+    --warn-text: #fcd34d;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    margin: 0;
+    padding: 32px;
+  }
+  .container { max-width: 1240px; margin: 0 auto; }
+  header {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 24px;
+  }
+  h1 { margin: 0 0 8px 0; color: var(--accent); font-size: 26px; }
+  h2 { color: var(--accent); font-size: 20px; border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-top: 28px; }
+  h3 { color: #bae6fd; font-size: 17px; margin: 16px 0 8px 0; }
+  p, li { color: #e2e8f0; }
+  .meta { color: var(--muted); font-size: 13px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .badge-pass { background: var(--pass-bg); color: var(--pass-text); }
+  .badge-warn { background: var(--warn-bg); color: var(--warn-text); }
+  .badge-info { background: #1e3a8a; color: #93c5fd; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #0f172a; color: var(--accent); font-weight: 600; }
+  tr:nth-child(even) { background: rgba(15, 23, 42, 0.45); }
+  code { background: #0f172a; padding: 2px 6px; border-radius: 4px; color: #bae6fd; font-family: monospace; }
+  .nav-bar { margin-bottom: 16px; font-size: 14px; }
+  .nav-bar a { margin-right: 18px; font-weight: 500; }
+</style>
+
+</head>
+<body>
+  <div class="container">
+    <div class="nav-bar">
+      <a href="index.html">Outgassing Database Home</a>
+      <a href="user-guide.html">ASTM E595 User Guide</a>
+      <a href="manufacturers.html">Manufacturer Codes (963)</a>
+      <a href="OutgassingData-CSV.csv">Download Raw CSV</a>
+    </div>
+    
+    <header>
+      <h1>NASA GSFC Outgassing Database User Guide (ASTM E595 / NASA RP-1124)</h1>
+      <div class="meta">Source: <a href="https://etd.gsfc.nasa.gov/capabilities/outgassing-database/user-guide/">https://etd.gsfc.nasa.gov/capabilities/outgassing-database/user-guide/</a> | Goddard Space Flight Center (GSFC) Materials Engineering Branch (Code 541)</div>
+    </header>
+    <div class="card">
+      <article class="entry entry-single no-entry-link page type-page" aria-label="Outgassing Database User Guide"><div class="entry-wrap entry-wrap-single"><div class="entry-content entry-content-single">
+<div class="remove-transparent-header stories-updates-page wp-block-group alignfull has-black-color has-text-color has-background eplus-wrapper has-lg-content-width has-md-padding-top has-md-padding-bottom has-no-margin-bottom" style="background:linear-gradient(0deg,rgb(160,174,183) 11%,rgb(238,238,238) 53%,rgb(169,184,195) 92%)"><div class="wp-block-group__inner-container is-layout-constrained wp-block-group-is-layout-constrained">
+<h1 class="secondary-nav-title-padding wp-block-heading has-text-align-center eplus-wrapper has-xxl-margin-top"><strong>Outgassing Database User Guide</strong></h1>
+
+
+
+<div class="wp-block-buttons eplus-wrapper is-content-justification-center is-layout-flex wp-container-core-buttons-is-layout-fe48e5de wp-block-buttons-is-layout-flex"><div class=" wp-block-button eplus-wrapper eplus-styles-uid-e525f5"><a class="wp-block-button__link button wp-element-button" href="/capabilities/outgassing-database">Outgassing Database</a></div></div>
+
+
+
+<div class="darker-link wp-block-group eplus-wrapper"><div class="wp-block-group__inner-container is-layout-constrained wp-block-group-is-layout-constrained">
+<div style="height:30px" aria-hidden="true" class=" wp-block-spacer eplus-wrapper"></div>
+
+
+
+<hr class="is-style-wide wp-block-separator has-text-color has-heading-color has-alpha-channel-opacity has-heading-background-color has-background eplus-wrapper"/>
+
+
+
+<div style="height:25px" aria-hidden="true" class=" wp-block-spacer eplus-wrapper"></div>
+
+
+
+<h3 class=" wp-block-heading eplus-wrapper"><strong>Introduction</strong></h3>
+
+
+
+<p class="darker-link eplus-wrapper wp-block-paragraph">This tenth compilation of outgassing data of materials intended for spacecraft use supersedes Reference Publication 1124, Revision 3, September 1993. The data were obtained at the Goddard Space Flight Center (GSFC), utilizing equipment developed at Stanford Research Institue (SRI) under contract to the Jet Propulsion Laboratory (JPL). The present publication contains new data, in addition to data from the previous reports, listed under References.</p>
+
+
+
+<p class="eplus-wrapper wp-block-paragraph">SRI personnel developed an apparatus for determining the mass loss in vacuum and for collecting the outgassed products. Their report (<a href="#references">Reference 1</a>), which contained data from June 1964 to August 1967, served well as a foundation for selecting spacecraft materials with low outgassing properties. The apparatus was also constructed at GSFC and, based on the SRI data and GSFC data, a GSFC report (<a href="#references">Reference 2</a>) was published. That report included data for those materials meeting two criteria: a maximum total mass loss (TML) of 1.0 percent and maximum collected volatile condensable material (CVCM) of 0.10 percent.</p>
+
+
+
+<p class="darker-link eplus-wrapper wp-block-paragraph">After a series of tests and verification of procedures, an American Society for Testing and Materials (ASTM) Standard Test Method was developed, based upon this apparatus. The method, &#8220;Total Mass Loss (TML) and Collected Volatile Condensable Materials (CVCM) from Outgassing in a Vacuum Environment,&#8221; is identified as E 595-77/84/90. The data developed through the years have been reported in <a href="#references">References 3, 4, 5, 6, 7, 8, and 9</a> as a means of assisting in selecting materials for space flight use.</p>
+
+
+
+<h3 class="wp-block-heading eplus-wrapper has-xl-margin-top"><strong>Equipment</strong></h3>
+
+
+
+<p class="eplus-wrapper wp-block-paragraph">The equipment used at GSFC is the micro-CVCM apparatus, as described by SRI. The title is derived from the testing of micro-quantities, as opposed to larger amounts (macro-quantities) and from the technique of condensing the volatile products to determine the amount of volatile condensable materials.</p>
+
+
+
+<p class="eplus-wrapper wp-block-paragraph">The testing is done in vacuum at stated temperatures for specific times. The apparatus presented in ASTM E 595-77/84/90 has a number of critical dimensions to ensure that similar systems should produce similar results. These critical dimensions are described in E 595-77/84/90.</p>
+
+
+
+<p class="eplus-wrapper wp-block-paragraph">A number of samples can be tested at one time in the vacuum system. Each sample, of 100 to 300 milligrams mass &#8211; nominally 250 milligrams &#8211; is placed into a pre-weighed aluminum foil boat, which has been thoroughly cleaned and dried. Following a 24-hour pre-conditioning at 25° C, 50% relative humidity and standard atmospheric pressure to ensure that the samples receive a common preliminary treatment, the individuals samples are weighed. The samples are then loaded into individual compartments in a solid copper bar that can be heated. Each compartment is closed by a solid copper cover, requiring that all volatile materials escape only through a 6.3-mm (0.25-in.) diameter exit port.</p>
+
+
+
+<p class="eplus-wrapper wp-block-paragraph">The copper heater bar, having 12 sample compartments, is heated to 398 K (125° C) for 24 hours. The sample is also heated to 398 K (125° C) by conduction and radiation. This causes the volatile materials to be driven off, with their only escape being through the exit port. At a distance of 12.7 mm (0.5 in.), a chromium-plated collector is in direct line of sight of the exit port and is maintained at 298 K (25° C). A significant portion of the escaping volatiles collects on the chromium-plated disk if the condensation temperature is 298 K (25° C) or above. Barriers are near the collector plate to prevent cross-contamination between adjacent samples.</p>
+
+
+
+<p class="eplus-wrapper wp-block-paragraph">The mass loss of the sample is determined from the weights before and after the 398 K (125° C) exposure, and the percentage loss is calculated to provide the TML. In a similar manner, the difference between the weight of a clean collector and of the collector having condensed materials will provide the mass of condensables. This mass of condensables is calculated as a percentage of the starting mass of the sample, and stated as CVCM.</p>
+
+
+
+<p class="eplus-wrapper wp-block-paragraph">A third value is that of water vapor regained (WVR). This value is obtained as a percentage of the starting mass is that amount of water readsorbed/reabsorbed in 24 hours while the sample is exposed to 25° C, and 50-percent relative humidity. This determination is made after the vacuum test is completed and the values for TML and CVCM have been determined. This procedure is optional, as indicated in E 595-77/84/90.</p>
+
+
+
+<h3 class="wp-block-heading eplus-wrapper has-xl-margin-top"><strong>Data Presentation</strong></h3>
+
+
+
+<p class="eplus-wrapper wp-block-paragraph">The data presented in the various sections contain GSFC data generated through the present. The outgassing data have been presented in three different ways in order to facilitate material selection. In Section A, the materials are divided by category into the 18 probable uses, such as adhesive, greases, paints, potting compounds, and so forth. In Section B, all the materials contained in Section A are listed in alphabetical order by the manufacturer&#8217;s identification. In Section C, the only materials listed are those having TML and CVCM equal to or lower than a maximum 1.0 percent TML and a maximum 0.10 percent CVCM. These are grouped by use, as in Section A.</p>
+
+
+
+<p class="eplus-wrapper wp-block-paragraph">These data are stored in computer memory for filing and reading. In this system, the computer has been instructed to follow a strict alphabetic and numerical order. This may, at first, seem confusing, particularly since the numbers are read from left to right, irrespective of the number of digits. For example, the order appears as DC 11, 1107, 142, 20-057, 2106, and 271. Similarly, Scotchcast 282 is followed by Scotchcast 3, 8, and 9. Also, numbers have precedence over letters; for example, MMM Tape 4016 appears before MMM Tape Y-966. It may be necessary to look for all known identifiers of a material to find it.</p>
+
+
+
+<h4 class="wp-block-heading eplus-wrapper has-lg-margin-top">Section A</h4>
+
+
+
+<p class="eplus-wrapper wp-block-paragraph">This section contains materials grouped in 18 categories according to their primary use, such as adhesives, conformal coatings, tapes, marking materials, etc. There are various types within the adhesive group, such as film, conductive, and foam, and this information is often stated in the description. However, certain materials can be used as potting compounds as well as adhesives. In these instances, the material is listed in one category only, reflecting its most prevalent use.</p>
+
+
+
+<p class="eplus-wrapper wp-block-paragraph">In the listing, the first column, &#8220;Material,&#8221; contains the name of each material, followed by the mixture of components, if there is more than one components. The outgassing data of TML, CVCM, and WVR are in the next columns, followed by three columns giving the curing time, temperature, and atmosphere for the particlular sample. If the cure conditions are unknown, the columns are left blank. Some materials are cured or post-cured in two or more steps, which are carried out in the order listed in this document. Some materials have been tested more than once, usually with different cures. WVR values were not obtained until mid-1975, so where no data are given, no GSFC data exist. All WVR values obtained since 1975 at GSFC have been entered in this compilation. The next column, &#8220;Data Reference,&#8221; is the GSFC number assigned chronologically to that specific test. The next column gives the application. The last column, &#8220;MFR Code,&#8221; contains a three-letter code for the manufacturer of the material. (The Appendix contains the manufacturers code list.)</p>
+
+
+
+<p class="eplus-wrapper has-lg-margin-bottom wp-block-paragraph">To offer some assistance in determining the approximate date a test was conducted, here is the most recent list:</p>
+
+
+
+<p class="eplus-wrapper wp-block-paragraph"><strong>Data References</strong></p>
+
+
+<div class="mai-columns"><div class="mai-columns-wrap has-columns" style="--column-gap:var(--spacing-xl);--row-gap:var(--spacing-xl);--align-columns:start;--align-columns-vertical:initial;">
+<div class="mai-column is-column" style="--flex-xs:0 0 100%;--flex-sm:0 0 100%;--columns-md:1/3;--flex-md:0 0 var(--flex-basis);--columns-lg:1/3;--flex-lg:0 0 var(--flex-basis);--justify-content:start;">
+
+<figure class=" wp-block-table eplus-wrapper"><table class="has-fixed-layout"><thead><tr><th>Year</th><th colspan="2">GSFC # Range</th></tr></thead><tbody><tr><td>1967</td><td>0</td><td>106</td></tr><tr><td>1968</td><td>107</td><td>899</td></tr><tr><td>1969</td><td>900</td><td>1695</td></tr><tr><td>1970</td><td>1696</td><td>2520</td></tr><tr><td>1971</td><td>2521</td><td>3551</td></tr><tr><td>1972</td><td>3552</td><td>4671</td></tr><tr><td>1973</td><td>4672</td><td>5554</td></tr><tr><td>1974</td><td>5555</td><td>6398</td></tr><tr><td>1975</td><td>6399</td><td>7285</td></tr><tr><td>1976</td><td>7286</td><td>8134</td></tr></tbody></table></figure>
+
+</div>
+
+<div class="mai-column is-column" style="--flex-xs:0 0 100%;--flex-sm:0 0 100%;--columns-md:1/3;--flex-md:0 0 var(--flex-basis);--columns-lg:1/3;--flex-lg:0 0 var(--flex-basis);">
+
+<figure class=" wp-block-table eplus-wrapper"><table class="has-fixed-layout"><thead><tr><th>Year</th><th colspan="2">GSFC # Range</th></tr></thead><tbody><tr><td>1977</td><td>8135</td><td>8777</td></tr><tr><td>1978</td><td>8778</td><td>10037</td></tr><tr><td>1979</td><td>10038</td><td>10730</td></tr><tr><td>1980</td><td>10731</td><td>11476</td></tr><tr><td>1981</td><td>11477</td><td>12244</td></tr><tr><td>1982</td><td>12245</td><td>12774</td></tr><tr><td>1983</td><td>12775</td><td>13539</td></tr><tr><td>1984</td><td>13540</td><td>14347</td></tr><tr><td>1985</td><td>14348</td><td>15192</td></tr><tr><td>1986</td><td>15193</td><td>16013</td></tr></tbody></table></figure>
+
+</div>
+
+<div class="mai-column is-column" style="--flex-xs:0 0 100%;--flex-sm:0 0 100%;--columns-md:1/3;--flex-md:0 0 var(--flex-basis);--columns-lg:1/3;--flex-lg:0 0 var(--flex-basis);--justify-content:start;">
+
+<figure class=" wp-block-table eplus-wrapper"><table class="has-fixed-layout"><thead><tr><th>Year</th><th colspan="2">GSFC # Range</th></tr></thead><tbody><tr><td>1987</td><td>16014</td><td>16864</td></tr><tr><td>1988</td><td>16865</td><td>17759</td></tr><tr><td>1989</td><td>17760</td><td>18610</td></tr><tr><td>1990</td><td>18611</td><td>19477</td></tr><tr><td>1991</td><td>19478</td><td>20260</td></tr><tr><td>1992</td><td>20261</td><td>20979</td></tr><tr><td>1993</td><td>20980</td><td>21642</td></tr><tr><td>1994</td><td>21643</td><td>22398</td></tr><tr><td>1995</td><td>22399</td><td>23364</td></tr><tr><td>1996</td><td>23365</td><td>24233</td></tr></tbody></table></figure>
+
+</div>
+</div></div>
+
+<div class="mai-columns"><div class="mai-columns-wrap has-columns" style="--column-gap:var(--spacing-xl);--row-gap:var(--spacing-xl);--align-columns:start;--align-columns-vertical:initial;">
+<div class="mai-column is-column" style="--flex-xs:0 0 100%;--flex-sm:0 0 100%;--columns-md:1/3;--flex-md:0 0 var(--flex-basis);--columns-lg:1/3;--flex-lg:0 0 var(--flex-basis);">
+
+<figure class=" wp-block-table eplus-wrapper"><table class="has-fixed-layout"><thead><tr><th>Year</th><th colspan="2">GSFC # Range</th></tr></thead><tbody><tr><td>1997</td><td>24234</td><td>25085</td></tr><tr><td>1998</td><td>25086</td><td>26007</td></tr><tr><td>1999</td><td>26008</td><td>26868</td></tr><tr><td>2000</td><td>26869</td><td>27501</td></tr><tr><td>2001</td><td>27502</td><td>27798</td></tr><tr><td>2002</td><td>27799</td><td>28244</td></tr><tr><td>2003</td><td>28245</td><td>28620</td></tr><tr><td>2004</td><td>28621</td><td>29134</td></tr><tr><td>2005</td><td>29137</td><td>29644</td></tr><tr><td>2006</td><td>29647</td><td>30055</td></tr></tbody></table></figure>
+
+</div>
+
+<div class="mai-column is-column" style="--flex-xs:0 0 100%;--flex-sm:0 0 100%;--columns-md:1/3;--flex-md:0 0 var(--flex-basis);--columns-lg:1/3;--flex-lg:0 0 var(--flex-basis);">
+
+<figure class=" wp-block-table eplus-wrapper"><table class="has-fixed-layout"><thead><tr><th>Year</th><th colspan="2">GSFC # Range</th></tr></thead><tbody><tr><td>2007</td><td>30058</td><td>30583</td></tr><tr><td>2008</td><td>30586</td><td>31150</td></tr><tr><td>2009</td><td>31153</td><td>31810</td></tr><tr><td>2010</td><td>31813</td><td>32434</td></tr><tr><td>2011</td><td>32437</td><td>33073</td></tr><tr><td>2012</td><td>33076</td><td>33709</td></tr><tr><td>2013</td><td>33712</td><td>34105</td></tr><tr><td>2014</td><td>34108</td><td>35355*</td></tr><tr><td>2015</td><td>35358</td><td>35622</td></tr><tr><td>2016</td><td>35625</td><td>35856</td></tr></tbody></table></figure>
+
+</div>
+
+<div class="mai-column is-column" style="--flex-xs:0 0 100%;--flex-sm:0 0 100%;--columns-md:1/3;--flex-md:0 0 var(--flex-basis);--columns-lg:1/3;--flex-lg:0 0 var(--flex-basis);--justify-content:start;">
+
+<figure class=" wp-block-table eplus-wrapper"><table class="has-fixed-layout"><thead><tr><th>Year</th><th colspan="2">GSFC # Range</th></tr></thead><tbody><tr><td>2017</td><td>35859</td></tr></tbody></table></figure>
+
+</div>
+</div></div>
+
+
+<p class="eplus-wrapper wp-block-paragraph">* Note: Technician accidentally skipped from 34000 to 35000 between 2 runs</p>
+
+
+
+<h4 class="wp-block-heading eplus-wrapper has-lg-margin-top">Section B</h4>
+
+
+
+<p class="eplus-wrapper wp-block-paragraph">This section is an alphabetical listing of the materials found in Section A. This will allow the reader to look for a material if its application is not known. The data presentation is the same as in Section A.</p>
+
+
+
+<h4 class="wp-block-heading eplus-wrapper has-lg-margin-top">Section C</h4>
+
+
+
+<p class="eplus-wrapper wp-block-paragraph">This listing contains only those materials having a TML of 1.0 percent or less, and having a CVCM of 0.10 percent or less. The materials are categorized as in Section A, thus providing low-outgassing materials for a specific use. The particular category was selected for the materials&#8217; most prevalent use, though some could have appeared in several categories if cross-referencing had been employed.</p>
+
+
+
+<h3 class="wp-block-heading eplus-wrapper has-xl-margin-top"><strong>Using the Data</strong></h3>
+
+
+
+<p class="eplus-wrapper wp-block-paragraph">Two-component materials are often listed as A/B, A/C, B/A, or sometimes as name1/name2. Their relative amounts are also listed as a ratio; for example, 1/1, 100/73, and 50/50. These are mixed as parts by weight (BW or PBW), and sometimes by volume (BV). The cure temperatures are in degrees Celsius and the times can be listed as minutes (M), hours (H), or days (D). If no cure is listed, the cure data are not known. Also, the cures performed in vacuum are indicated by E-3 or E-6, referring to 10-3&nbsp;or 10-6&nbsp;torr, (0.13 N/m² or 0.00013 N/m²), respectively.</p>
+
+
+
+<p class="eplus-wrapper wp-block-paragraph">Some materials, like tapes and film adhesives, require special preparation for testing. For some early tests, tape samples were applied to a tubular screen (S), permitting the adhesive to be exposed totally to vacuum or were adhered to an aluminum ring (R), with the adhesive lying against the aluminum to permit outgassing at the edges. These techniques are no longer used. The present technique is to apply the tape to pre-weighed aluminum foil (F). Similarly, double-sided tapes and transfer film adhesives are applied to pre-weighed aluminum foil (F) and covered with another piece of foil, a procedure that permits outgassing at the edges. This composite must be cut into smaller pieces for loading into the sample holder.</p>
+
+
+
+<p class="eplus-wrapper wp-block-paragraph">One must be aware that these data have been collected over a period of 25 years. It is likely that some materials have changed over this time span. The data can be used as a guide in selecting (with a fair degree of confidence) low-outgassing materials for space flight applications.</p>
+
+
+
+<p class="eplus-wrapper wp-block-paragraph">In the past, manufacturing difficulties have been encountered in the production of some material; e.g., the start-up of a new production facility, or the forced change in formulation of a product to the non-availability of a component-information not always made public. As a consequence, one may find different results for a material having the same designated cure conditions. Sometimes&nbsp;<q>Batch Testing</q>&nbsp;should be the prudent course to follow if an application is considered critical; i.e., testing each lot of a material obtained over a lengthy period of time.</p>
+
+
+
+<h3 class="wp-block-heading eplus-wrapper has-xl-margin-top" id="references"><strong>References</strong></h3>
+
+
+<ol class=" wp-block-list eplus-wrapper eplus-styles-uid-95dd7e">
+<li class=" eplus-wrapper">Muraca, R. F., and J. S. Whittick, &#8220;Polymers for Spacecraft Applications,&#8221; Final Report, NASA 7-100, 1967.</li>
+
+
+
+<li class=" eplus-wrapper">Fisher, Aaron and Mermelstein, Benjamin, &#8220;A Compilation of Low Outgassing Polymeric Materials Normally Recommended for GSFC Cognizant Spacecraft,&#8221; NASA TM X-65705, July 1971.</li>
+
+
+
+<li class=" eplus-wrapper">Campbell, William A. Jr., Richard S. Marriott, and John J. Park, &#8220;A Compilation of Outgassing Data for Spacecraft Materials,&#8221; NASA TN D-7362, September 1973.</li>
+
+
+
+<li class=" eplus-wrapper">Campbell, William A. Jr., Richard S. Marriott, and John J. Park, &#8220;Outgassing Data for Spacecraft Materials,&#8221; NASA TN D-8008, July 1975.</li>
+
+
+
+<li class=" eplus-wrapper">Campbell, William A. Jr., Richard S. Marriott, and John J. Park, &#8220;An Outgassing Data Compilation of Spacecraft Materials,&#8221; NASA Reference Publication 1014, January 1978.</li>
+
+
+
+<li class=" eplus-wrapper">Campbell, William A. Jr., Richard S. Marriott, and John J. Park, &#8220;Outgassing Data for Spacecraft Materials,&#8221; NASA Reference Publication 1061, August 1980.</li>
+
+
+
+<li class=" eplus-wrapper">Campbell, William A. Jr., Richard S. Marriott, and John J. Park, &#8220;Outgassing Data for Spacecraft Materials,&#8221; NASA Reference Publication 1124, June 1984.</li>
+
+
+
+<li class=" eplus-wrapper">Campbell, William A. Jr., and Richard S. Marriott, &#8220;Outgassing Data for Selecting Spacecraft Materials,&#8221; NASA Reference Publication 1124 Revised, August 1987.</li>
+
+
+
+<li class=" eplus-wrapper">Campbell, William A. Jr., and John J. Scialdone, &#8220;Outgassing Data for Selecting Spacecraft Materials,&#8221; NASA Reference Publication 1124, Revision 3, November 1990.</li>
+</ol>
+
+
+<div style="height:62px" aria-hidden="true" class=" wp-block-spacer eplus-wrapper"></div>
+
+
+
+<div style="height:100px" aria-hidden="true" class=" wp-block-spacer eplus-wrapper"></div>
+</div></div>
+</div></div>
+</div></div></article>
+    </div>
+    
+  </div>
+</body>
+</html>
