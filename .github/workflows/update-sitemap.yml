@@ -44,5 +44,12 @@ jobs:
             git commit -m "chore(outgassing): automated NASA GSFC Outgassing Database mirror update [skip ci]"
             git push
           else
-            echo "No material record changes detected (zero-churn verified)."
+            DAYS_SINCE_COMMIT=$(( ($(date +%s) - $(git log -1 --format=%ct)) / 86400 ))
+            if [ "$DAYS_SINCE_COMMIT" -ge 45 ]; then
+              echo "No material record changes, but last commit was ${DAYS_SINCE_COMMIT} days ago (>= 45d). Pushing empty keepalive commit."
+              git commit --allow-empty -m "chore(ci): 45-day keepalive to prevent GitHub Actions 60-day schedule auto-disable [skip ci]"
+              git push
+            else
+              echo "No material record changes detected (zero-churn verified, last commit ${DAYS_SINCE_COMMIT}d ago)."
+            fi
           fi
